@@ -37,7 +37,8 @@ android {
         development {
             dimension "environment"
             applicationIdSuffix ".dev"
-            versionNameSuffix "-dev"
+            versionCode (project.findProperty("devVersionCode") ?: android.defaultConfig.versionCode).toInteger()
+            versionNameSuffix project.findProperty("devVersionNameSuffix") ?: "-dev"
             manifestPlaceholders = [oauthScheme: "nutritracedev"]
             resValue "string", "app_name", "NutriTraceDev"
             resValue "string", "title_activity_main", "NutriTraceDev"
