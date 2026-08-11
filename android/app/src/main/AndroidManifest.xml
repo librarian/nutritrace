@@ -42,8 +42,8 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="nutritrace" android:host="callback" />
-                <data android:scheme="nutritrace" android:host="oidc-callback" />
+                <data android:scheme="${oauthScheme}" android:host="callback" />
+                <data android:scheme="${oauthScheme}" android:host="oidc-callback" />
             </intent-filter>
 
         </activity>

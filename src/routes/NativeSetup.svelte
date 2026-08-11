@@ -16,7 +16,7 @@
   // this screen on a fresh install. Now the URL is validated first, then we
   // ask the server /api/auth/status which auth methods to render.
   let step = 'choose';
-  let serverUrl = '';
+  let serverUrl = import.meta.env.VITE_DEFAULT_SERVER_URL || '';
   let validatedUrl = '';        // set after successful step-1 validation
   let providers = [];            // OIDC providers array from /api/auth/status
   let passwordLoginEnabled = true;
